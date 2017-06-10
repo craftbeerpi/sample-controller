@@ -47,7 +47,7 @@ class SampleController(KettleController):
         while self.is_running():
             # YOUR LOGIC GOES HERE
             
-            # Access the proerties
+            # Access the properties
             self.text1
             self.p1
             self.s1
