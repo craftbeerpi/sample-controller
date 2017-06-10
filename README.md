@@ -1,6 +1,6 @@
 # Sample Code for Custom Controller
 
-With a controller is possible to control the kettle temperature
+With a controller is possible to control the kettle temperature. You could code hysteresis or PID controller or a special controller for pump systems. All you need is to implement one single Pyhton class
 
 ```
 from modules import cbpi
