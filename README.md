@@ -12,9 +12,15 @@ from modules.core.props import Property
 class SampleController(KettleController):
 
     # Custom Properties
-    
+       
+    # will crate a number field for the user interface
     p1 = Property.Number("My Number Label", True, 0)
+    
+    # will create a text field for the user interface
     text1 = Property.Text("My Label", True, "Hello World")
+    
+    # Will create a drop down for the web interface
+    s1 = Property.Select("Select Property", [1,2,3] )
 
     def stop(self):
         '''
@@ -44,6 +50,7 @@ class SampleController(KettleController):
             # Access the proerties
             self.text1
             self.p1
+            self.s1
             
             # get current kettle temperature
             self.get_temp()
@@ -56,6 +63,9 @@ class SampleController(KettleController):
             
             # switch heater off
             self.heater_off()
+            
+            # get sensor value. The method takes the sensor id as in value.
+            self.get_sensor_value(1)
            
             # Make sure to add a sleep between each iteration. Use self.sleep
             
