@@ -45,5 +45,19 @@ class SampleController(KettleController):
             self.text1
             self.p1
             
+            # get current kettle temperature
+            self.get_temp()
+            
+            # get current kettle target temperature 
+            self.get_target_temp()
+            
+            # switch heater on
+            self.heater_on(100)
+            
+            # switch heater off
+            self.heater_off()
+           
+            # Make sure to add a sleep between each iteration. Use self.sleep
+            
             self.sleep(1)
 ```
